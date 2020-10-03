@@ -4,22 +4,24 @@ import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-calci',
   template: `
+  <div class="container">
 <div class="row">
-    <div class="col-6">
+    <div class="input-1 col-3">
       <input type="number" [(ngModel)]="num1" placeholder="Enter Number 1" class="form-control">
     </div>
-    <div class = "col-6">
+    <div class = "input-2 col-3">
       <input type="number" [(ngModel)]="num2" placeholder="Enter Number 2" class="form-control">
     </div>
 </div>
-<div class="d-flex">
+<div class="d-flex col-6">
   <button type="button" class="btn btn-primary" (click) = "add()">Addition</button><br>
   <button type="button" class="btn btn-secondary" (click) = "sub()">Subtraction</button><br>
   <button type="button" class="btn btn-success" (click) = "mul()">Multiplication</button><br>
   <button type="button" class="btn btn-danger" (click) = "div()">Division</button>
  </div>
  <div>
- <h2> Result : {{result}} </h2>
+ <h4> Result : {{result}} </h4>
+ </div>
  </div>
   `,
   styles: [
